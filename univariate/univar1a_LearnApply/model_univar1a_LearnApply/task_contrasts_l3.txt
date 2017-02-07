@@ -1,0 +1,2 @@
+task001 contr1 1
+task001 contr2 -1
