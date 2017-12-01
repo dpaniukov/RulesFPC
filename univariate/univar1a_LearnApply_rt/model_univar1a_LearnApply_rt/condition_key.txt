@@ -1,0 +1,8 @@
+task001 ev001 Stim_apply
+task001 ev002 Stim_learn
+task001 ev003 Stim_na
+task001 ev004 Feedback_apply
+task001 ev005 Feedback_learn
+task001 ev006 Feedback_na
+task001 ev007 Stim_apply_rt
+task001 ev008 Stim_learn_rt

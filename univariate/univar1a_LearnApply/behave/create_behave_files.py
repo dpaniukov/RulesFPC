@@ -131,9 +131,6 @@ for subj in subjects:
                 if answer_fdb == 0:
                     ev5.append(str(ss_data[row][26])+" 1 1")
 
-                # prepare MVPA attribute file for classification
-                if int(all_cor[row][0]) == 1 and int(all_cor[row-1][0]) == 1
-
         #save the data
         if ev1==[]:
             ev1=['0 0 0']
@@ -148,7 +145,7 @@ for subj in subjects:
         if ev6==[]:
             ev6=['0 0 0']
 
-        write_path = "/Volumes/LaCie/Dmitrii/repos/rules/univariate/univar1a_LearnApply/behave/source_files/"
+        write_path = "/mnt/net/LaCie/Dmitrii/repos/rules/univariate/univar1a_LearnApply/behave/source_files/"
 
         for evar in ev1:
             data = str(evar)+'\n'

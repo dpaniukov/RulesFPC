@@ -1,6 +1,6 @@
 task001 ev001 Stim_apply
 task001 ev002 Stim_learn
 task001 ev003 Stim_na
-task001 ev004 Feedback_correct
-task001 ev005 Feedback_incorrect
+task001 ev004 Feedback_apply
+task001 ev005 Feedback_learn
 task001 ev006 Feedback_na

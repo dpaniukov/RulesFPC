@@ -204,33 +204,6 @@ elif lvl2_cope==3: #matching>classification
                 os.path.join(l12_out_dir,"Subject026","stats_dir","_subject_id_Subject026","_flameo"+str(lvl1_cope-1),"stats","varcope4.nii.gz"),
                 os.path.join(l12_out_dir,"Subject027","stats_dir","_subject_id_Subject027","_flameo"+str(lvl1_cope-1),"stats","varcope3.nii.gz")]
 
-subj_masks=[os.path.join(l12_out_dir,"Subject001","stats_dir","_subject_id_Subject001","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject002","stats_dir","_subject_id_Subject002","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject003","stats_dir","_subject_id_Subject003","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject004","stats_dir","_subject_id_Subject004","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject005","stats_dir","_subject_id_Subject005","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject006","stats_dir","_subject_id_Subject006","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject008","stats_dir","_subject_id_Subject008","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject010","stats_dir","_subject_id_Subject010","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject011","stats_dir","_subject_id_Subject011","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject012","stats_dir","_subject_id_Subject012","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject013","stats_dir","_subject_id_Subject013","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject014","stats_dir","_subject_id_Subject014","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject015","stats_dir","_subject_id_Subject015","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject016","stats_dir","_subject_id_Subject016","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject017","stats_dir","_subject_id_Subject017","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject018","stats_dir","_subject_id_Subject018","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject019","stats_dir","_subject_id_Subject019","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject020","stats_dir","_subject_id_Subject020","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject021","stats_dir","_subject_id_Subject021","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject022","stats_dir","_subject_id_Subject022","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject023","stats_dir","_subject_id_Subject023","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject024","stats_dir","_subject_id_Subject024","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject025","stats_dir","_subject_id_Subject025","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject026","stats_dir","_subject_id_Subject026","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz"),
-            os.path.join(l12_out_dir,"Subject027","stats_dir","_subject_id_Subject027","_flameo"+str(lvl1_cope-1),"stats","mask.nii.gz")]
-
-
 
 def get_subjectinfo(subj_list, base_dir, task_id, model_id):
     #from glob import glob
@@ -289,12 +262,8 @@ copemerge    = pe.Node(interface=fsl.Merge(dimension='t'),
 varcopemerge = pe.Node(interface=fsl.Merge(dimension='t'),
                        name="varcopemerge")
 
-maskemerge = pe.Node(interface=fsl.Merge(dimension='t'),
-                       name="maskemerge")
-
 copemerge.inputs.in_files=subj_copes
 varcopemerge.inputs.in_files=subj_varcopes
-maskemerge.inputs.in_files=subj_masks
 
 """
 Setup a set of contrasts for level 2

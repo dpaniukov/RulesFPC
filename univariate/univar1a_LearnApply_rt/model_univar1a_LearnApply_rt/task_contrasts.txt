@@ -1,0 +1,9 @@
+task001 stim_cor 1 0 0 0 0 0 0 0
+task001 stim_incor 0 1 0 0 0 0 0 0
+task001 stim_cor>stim_inc 1 -1 0 0 0 0 0 0
+task001 fdb_cor 0 0 0 1 0 0 0 0
+task001 fdb_incor 0 0 0 0 1 0 0 0
+task001 fdb_cor>fdb_incor 0 0 0 1 -1 0 0 0
+task001 stim_rt_cor 0 0 0 0 0 0 1 0
+task001 stim_rt_incor 0 0 0 0 0 0 0 1
+task001 stim_rt_cor>stim_rt_inc 0 0 0 0 0 0 1 -1
